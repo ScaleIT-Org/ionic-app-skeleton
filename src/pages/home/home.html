@@ -8,7 +8,9 @@
       ScaleIT App User Page
     </ion-card-header>
     <ion-card-content>
-      Content
+      <button ion-button icon-left *ngFor="let item of bag1" ngDraggable>
+        <ion-icon name="aperture"></ion-icon> {{item}}
+      </button>
     </ion-card-content>
     <ion-card-content style="height:50vh;">
     </ion-card-content>
