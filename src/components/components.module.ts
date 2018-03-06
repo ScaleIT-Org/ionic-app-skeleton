@@ -1,11 +1,19 @@
-import { NgModule } from '@angular/core';
-import { HeaderComponent } from './header/header';
-import { FooterComponent } from './footer/footer';
+import { NgModule } from "@angular/core";
+import { IonicModule } from "ionic-angular";
+import { AppFooterComponent } from './app-footer/app-footer';
+import { AppHeaderComponent } from './app-header/app-header';
 @NgModule({
-	declarations: [HeaderComponent,
-    FooterComponent],
-	imports: [],
-	exports: [HeaderComponent,
-    FooterComponent]
+  declarations: [
+    AppFooterComponent,
+    AppHeaderComponent
+  ],
+  imports: [
+    IonicModule.forRoot(AppHeaderComponent),
+    IonicModule.forRoot(AppFooterComponent),
+  ],
+  exports: [
+    AppFooterComponent,
+    AppHeaderComponent
+  ]
 })
 export class ComponentsModule {}
