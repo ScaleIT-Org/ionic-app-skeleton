@@ -29,4 +29,11 @@
     .button.active {
       background: map-get($colors, primary);
     }
+
+    #app-logo{
+      // align logo with text
+      vertical-align: middle;
+    }
+
+
 }
