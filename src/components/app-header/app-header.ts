@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 /**
  * Generated class for the AppHeaderComponent component.
@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
  * Components.
  */
 @Component({
-  selector: 'app-header',
-  templateUrl: 'app-header.html'
+  selector: "app-header",
+  templateUrl: "app-header.html"
 })
 export class AppHeaderComponent {
-
   text: string;
+  @Input() pageName: string;
 
   constructor() {
-    console.log('Hello AppHeaderComponent Component');
-    this.text = 'Hello World';
+    console.log("Hello AppHeaderComponent Component");
+    this.pageName = "page name";
+    this.text = "Hello World";
   }
-
 }

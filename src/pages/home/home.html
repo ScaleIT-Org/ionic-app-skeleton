@@ -1,5 +1,6 @@
 <ion-header>
-  <app-header></app-header>
+   <!-- Passing Data into the app-header component (for one way binding) -->
+  <app-header pageName="User Page"></app-header>
 </ion-header>
 
 <ion-content padding>
@@ -14,12 +15,33 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      Navigation
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Uses classical html navigation -->
+      <a href="/#/admin">Jump to Administration</a>
+
+
+      <!-- Use the ionic stack for navigation (automatic back button) -->
+      <!-- Text Button -->
+       <button ion-button color="danger" [navPush]="'admin'">Push admin page onto the stack and navigate to it</button>
+
+      <!-- Style Icon Button -->
+      <button [navPush]="'admin'" ion-button icon-end>
+        Admin
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
   This is the ScaleIT Ionic App skeleton.
   <p>
     Built with Ionic, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 </ion-content>
 
-<ion-footer style=" background-color: lightgray; text-align: center; justify-content: center; align-items: center;">
+<ion-footer>
   <app-footer></app-footer>
 </ion-footer>

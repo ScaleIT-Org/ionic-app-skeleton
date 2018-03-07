@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -16,24 +15,23 @@
 // automatically applied to the <body> element in the app.
 .ios,
 .md {
-    .scroll-content {
-      background-color: map-get($colors, light);
-    }
-    ion-card-header {
-      font-weight: bold;
-    }
-    .button {
-      background: map-get($colors, gray);
+  .scroll-content {
+    background-color: map-get($colors, light);
+  }
+  ion-card-header {
+    font-weight: bold;
+  }
+  .button {
+    background: map-get($colors, gray);
+  }
+  .button.active {
+    background: map-get($colors, primary);
+  }
 
-    }
-    .button.active {
-      background: map-get($colors, primary);
-    }
-
-    #app-logo{
-      // align logo with text
-      vertical-align: middle;
-    }
-
-
+  ion-footer {
+    background-color: lightgray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
