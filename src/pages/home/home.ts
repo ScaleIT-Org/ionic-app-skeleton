@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {FigureProvider} from "../../providers/figure/figure";
+import {CookieService} from "ngx-cookie";
 
 @Component({
   selector: 'page-home',
@@ -10,9 +11,11 @@ export class HomePage {
 
   hoomans: string[];
   ais: string[];
-  itemStyles: Map = new Map();
+  private itemStyles: object;
 
-  constructor(public navCtrl: NavController, private figureProvider: FigureProvider) {
+  constructor(public navCtrl: NavController,
+              private figureProvider: FigureProvider,
+              private cookieService: CookieService) {
     // use an observer so attributes get updated when data is available,
     // otherwise the attributes would be undefined on start
     let figureObserver = this.figureProvider.getFigures();
@@ -30,11 +33,22 @@ export class HomePage {
           .map(x => x.name);
       });
 
-    this.itemStyles.set('Andrei', {transform: 'translate(584px, 84px)', transition: 'none'});
+    let cookieItemStyles = this.cookieService.getObject('homeItemStyles');
+    if (cookieItemStyles) {
+      console.log(cookieItemStyles);
+      this.itemStyles = cookieItemStyles;
+    } else {
+      this.itemStyles = {};
+    }
   }
 
   saveStyle($event, item) {
-    this.itemStyles[item] = $event.style;
-    console.log($event.style);
+    this.itemStyles[item] = {transform: $event.style.transform, transition: $event.style.transition};
+    console.log(this.itemStyles[item]);
+    this.cookieService.putObject('homeItemStyles', this.itemStyles);
+  }
+
+  getStyle(item) {
+    return this.itemStyles[item];
   }
 }

@@ -11,7 +11,7 @@
 
       <div>
         <button ion-button icon-left *ngFor="let item of hoomans" ngDraggable
-                (stopped)="saveStyle($event, item)" [ngStyle]="itemStyles.get(item)">
+                (stopped)="saveStyle($event, item)" [ngStyle]="getStyle(item)">
           <ion-icon name="aperture"></ion-icon> {{item}}
         </button>
       </div>
