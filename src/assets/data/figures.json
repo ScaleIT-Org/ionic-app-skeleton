@@ -1,0 +1,22 @@
+[
+  {
+    "name": "PotatOS",
+    "type": "AI"
+  },
+  {
+    "name": "GLaDOS",
+    "type": "AI"
+  },
+  {
+    "name": "Chell",
+    "type": "Human"
+  },
+  {
+    "name": "Atlas",
+    "type": "AI"
+  },
+  {
+    "name": "Andrei",
+    "type": "Human"
+  }
+]

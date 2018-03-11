@@ -9,9 +9,16 @@
     </ion-card-header>
     <ion-card-content>
 
-      <button ion-button icon-left *ngFor="let item of bag1" ngDraggable>
-        <ion-icon name="aperture"></ion-icon> {{item}}
-      </button>
+      <div>
+        <button ion-button icon-left *ngFor="let item of hoomans" ngDraggable>
+          <ion-icon name="aperture"></ion-icon> {{item}}
+        </button>
+      </div>
+      <div>
+        <button ion-button icon-left *ngFor="let item of ais" ngDraggable>
+          <ion-icon name="aperture"></ion-icon> {{item}}
+        </button>
+      </div>
     </ion-card-content>
     <ion-card-content style="height:50vh;">
     </ion-card-content>
