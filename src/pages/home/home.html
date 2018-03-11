@@ -10,7 +10,8 @@
     <ion-card-content>
 
       <div>
-        <button ion-button icon-left *ngFor="let item of hoomans" ngDraggable>
+        <button ion-button icon-left *ngFor="let item of hoomans" ngDraggable
+                (stopped)="saveStyle($event, item)" [ngStyle]="itemStyles.get(item)">
           <ion-icon name="aperture"></ion-icon> {{item}}
         </button>
       </div>

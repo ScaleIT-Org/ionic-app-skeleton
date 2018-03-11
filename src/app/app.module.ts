@@ -11,10 +11,11 @@ import {ComponentsModule} from '../components/components.module';
 import {AngularDraggableModule} from "angular2-draggable";
 import {FigureProvider} from '../providers/figure/figure';
 import {EnvironmentProvider} from '../providers/environment/environment';
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [MyApp, HomePage],
-  imports: [BrowserModule, HttpClientModule,
+  imports: [BrowserModule, HttpClientModule, CommonModule,
     IonicModule.forRoot(MyApp), ComponentsModule, AngularDraggableModule],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage],

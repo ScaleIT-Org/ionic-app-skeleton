@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import {Figure, FigureProvider} from "../../providers/figure/figure";
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {FigureProvider} from "../../providers/figure/figure";
 
 @Component({
   selector: 'page-home',
@@ -10,6 +10,7 @@ export class HomePage {
 
   hoomans: string[];
   ais: string[];
+  itemStyles: Map = new Map();
 
   constructor(public navCtrl: NavController, private figureProvider: FigureProvider) {
     // use an observer so attributes get updated when data is available,
@@ -28,5 +29,12 @@ export class HomePage {
           .filter(x => x.type === 'AI') // get all AIs
           .map(x => x.name);
       });
+
+    this.itemStyles.set('Andrei', {transform: 'translate(584px, 84px)', transition: 'none'});
+  }
+
+  saveStyle($event, item) {
+    this.itemStyles[item] = $event.style;
+    console.log($event.style);
   }
 }
