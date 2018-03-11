@@ -5,17 +5,22 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      ScaleIT App User Page
+      ScaleIT App User Page <br>
+      <button ion-button color="danger" (click)="reset()">
+        Reset positions
+      </button>
     </ion-card-header>
     <ion-card-content>
 
       <div>
+        <p>Hoomans remember positions (try reloading the page):</p>
         <button ion-button icon-left *ngFor="let item of hoomans" ngDraggable
                 (stopped)="saveStyle($event, item)" [ngStyle]="getStyle(item)">
           <ion-icon name="aperture"></ion-icon> {{item}}
         </button>
       </div>
       <div>
+        <p>AI forgets position</p>
         <button ion-button icon-left *ngFor="let item of ais" ngDraggable>
           <ion-icon name="aperture"></ion-icon> {{item}}
         </button>

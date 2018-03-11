@@ -44,11 +44,15 @@ export class HomePage {
 
   saveStyle($event, item) {
     this.itemStyles[item] = {transform: $event.style.transform, transition: $event.style.transition};
-    console.log(this.itemStyles[item]);
     this.cookieService.putObject('homeItemStyles', this.itemStyles);
   }
 
   getStyle(item) {
     return this.itemStyles[item];
+  }
+
+  reset() {
+    this.itemStyles = {};
+    this.cookieService.remove('homeItemStyles');
   }
 }
