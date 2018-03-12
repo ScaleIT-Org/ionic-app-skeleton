@@ -4,6 +4,11 @@
 
 The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Apps.
 
+Give it a try:
+
+    docker-compose up
+    # navigate to localhost:8100
+
 Skeleton Functionality:
 
 1) Ionic frontend with Angular
