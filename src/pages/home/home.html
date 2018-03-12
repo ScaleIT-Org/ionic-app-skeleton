@@ -1,5 +1,5 @@
 <ion-header>
-   <!-- Passing Data into the app-header component (for one way binding) -->
+  <!-- Passing Data into the app-header component (for one way binding) -->
   <app-header pageName="User Page"></app-header>
 </ion-header>
 
@@ -10,6 +10,10 @@
     </ion-card-header>
     <ion-card-content>
       Content
+      <p>{{"upper case content pipe example 42" | metricConverter}}
+      </p>
+
+
     </ion-card-content>
     <ion-card-content style="height:50vh;">
     </ion-card-content>
@@ -26,7 +30,7 @@
 
       <!-- Use the ionic stack for navigation (automatic back button) -->
       <!-- Text Button -->
-       <button ion-button color="danger" [navPush]="'admin'">Push admin page onto the stack and navigate to it</button>
+      <button ion-button color="danger" [navPush]="'admin'">Push admin page onto the stack and navigate to it</button>
 
       <!-- Style Icon Button -->
       <button [navPush]="'admin'" ion-button icon-end>
@@ -38,7 +42,8 @@
 
   This is the ScaleIT Ionic App skeleton.
   <p>
-    Built with Ionic, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Built with Ionic, the
+    <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 </ion-content>
 

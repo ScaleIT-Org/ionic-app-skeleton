@@ -1,4 +1,3 @@
-import { HomePage } from './../pages/home/home';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -7,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { ScaleITDomainApp } from './app.component';
 import { HomePageModule } from '../pages/home/home.module';
+import { HttpDataProvider } from '../providers/http-data/http-data';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // somehow ionicons get busted when doing lazy loaded pages (declare HomePage here and they work)
@@ -18,14 +19,16 @@ import { HomePageModule } from '../pages/home/home.module';
       backButtonText: "a"
     }),
     // because the root page component is lazy loaded, it must be imported in the root module
-    HomePageModule
+    HomePageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [ScaleITDomainApp],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    HttpDataProvider
   ]
 })
 export class AppModule {}
