@@ -1,0 +1,6 @@
+version: '2'
+services:
+    myi40app:
+        image: myi40app:latest
+        ports:
+          - "5002:5002"
