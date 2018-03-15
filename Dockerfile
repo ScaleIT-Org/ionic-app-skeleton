@@ -1,4 +1,4 @@
-FROM node:carbon-alpine
+FROM node:carbon-alpine AS build-env
 
 # Upgrade OS dependencies
 RUN apk update && apk upgrade
@@ -46,7 +46,7 @@ EXPOSE 80
 
 # Copy from build stage
 WORKDIR /www
-COPY --from=0 /opt/app/www .
+COPY --from=build-env /opt/app/www .
 
-# using array notation causes node to be PID1 and will not exit properly. Without the array notation the shell forwards the sigterm correctly. 
+# using array notation causes node to be PID1 and will not exit properly. Without the array notation the shell forwards the sigterm correctly.
 CMD ["nginx", "-g", "daemon off;"]
