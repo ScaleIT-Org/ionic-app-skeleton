@@ -8,9 +8,7 @@ import { AppHeaderComponent } from './app-header/app-header';
     AppHeaderComponent
   ],
   imports: [
-    // you need to use IonicModule.forRoot() method to 'provide' ionic directives to your components
-    IonicModule.forRoot(AppHeaderComponent),
-    IonicModule.forRoot(AppFooterComponent),
+    IonicModule
   ],
   exports: [
     AppFooterComponent,

@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     IonicModule.forRoot(ScaleITDomainApp, {
       //not working
-      backButtonText: "a"
+      backButtonText: ""
     }),
     // because the root page component is lazy loaded, it must be imported in the root module
     HomePageModule,
