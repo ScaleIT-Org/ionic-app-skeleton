@@ -30,9 +30,22 @@ It is installed via
  npm install angular2-draggable --save
 ```
 
-To enable it for any DOM element add the attribute ```ngDraggable``` to the HTML tag declaration.
+Declare it in the module you want to use it (eg. app module or a page module (IonicPage)):
+```
+import { AngularDraggableModule } from "angular2-draggable";
+...
+@NgModule({
+  imports: [AngularDraggableModule]
+```
 
-### Example
+CSS for modified cursor:
+```
+  .ng-draggable {
+    cursor: move;
+  }
+```
+
+To enable it for any DOM element add the attribute ```ngDraggable``` to the HTML tag declaration.
 
 ```html
 <button ion-button ngDraggable>
