@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ScaleIT-Org/media-ressources/master/logo/scaleit-logo.png" width="20%"/>
 
-# Ionic App Skeleton
+# Ionic App Skeleton ![License](https://img.shields.io/github/license/ScaleIT-Org/kong-sidecar.svg?link=https://github.com/ScaleIT-Org/kong-sidecar/blob/master/LICENSE)
 
 The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Apps.
 
