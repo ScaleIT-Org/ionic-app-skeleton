@@ -7,8 +7,8 @@ RUN apk update && apk upgrade
 WORKDIR /opt/app
 
 #Timezone
-RUN apk add tzdata && cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-RUN echo "Europe/Berlin" > /etc/timezone
+RUN apk add tzdata && cp /usr/share/zoneinfo/UTC /etc/localtime
+RUN echo "UTC" > /etc/timezone
 RUN date && apk del tzdata
 
 # Copy Node.js App dependency manifest
@@ -29,8 +29,8 @@ FROM node:carbon-alpine
 RUN apk update && apk upgrade
 
 #Timezone
-RUN apk add tzdata && cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-RUN echo "Europe/Berlin" > /etc/timezone
+RUN apk add tzdata && cp /usr/share/zoneinfo/UTC /etc/localtime
+RUN echo "UTC" > /etc/timezone
 RUN date && apk del tzdata
 
 # Install Nginx for app serving
