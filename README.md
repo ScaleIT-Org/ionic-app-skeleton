@@ -2,7 +2,7 @@
 
 # Ionic App Skeleton ![License](https://img.shields.io/github/license/ScaleIT-Org/ionic-app-skeleton.svg?link=https://github.com/ScaleIT-Org/ionic-app-skeleton/blob/master/LICENSE)
 
-The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Apps.
+The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Domain Apps.
 
 Give it a try:
 
