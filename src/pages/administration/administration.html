@@ -16,6 +16,12 @@
           Currently loading data from {{dataProvider.baseUrl}}
         </ion-note>
       </p>
+      <p>
+        Data loaded:
+        <p *ngFor="let theName of data; index as i;">
+          {{i}} Loaded {{theName}}
+        </p>
+
     </ion-card-content>
   </ion-card>
 </ion-content>

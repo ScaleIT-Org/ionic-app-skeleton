@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ScaleIT Data",
+    "content": "12345",
+    "type": "someData"
+  },
+  { "name": "ScaleIT Data 2", "content": "abcd", "type": "someOtherData" },
+  { "name": "ScaleIT Data 3", "content": "12345", "type": "someData"  },
+  { "name": "ScaleIT Data 4", "content": "12345", "type": "someOtherData"  }
+]
