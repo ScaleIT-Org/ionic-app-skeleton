@@ -13,8 +13,12 @@
       <p>{{"upper case content pipe example 42" | metricConverter}}
       </p>
       <p>Today is {{ today| date:'yyyy-MM-dd HH:mm a z':'GMT+2'}} in Baden-Würrtemberg</p>
-
-
+    </ion-card-content>
+    <ion-card-content>
+      <h2 translate>demo.title</h2>
+      <!-- You might even think of translating german to german for different companies and different jargons -->
+      <button ion-button (click)="changeLanguage('de')">{{ 'demo.german' | translate }}</button>
+      <button ion-button (click)="changeLanguage('en')">{{ 'demo.english' | translate }}</button>
     </ion-card-content>
     <ion-card-content style="height:50vh;">
     </ion-card-content>
