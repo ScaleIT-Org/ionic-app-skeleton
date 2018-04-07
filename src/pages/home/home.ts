@@ -19,6 +19,7 @@ export class HomePage {
     private translate : TranslateService
   ) {
     this.today = Date.now();
+    this.changeLanguage('de');
   }
 
   // translation usage example from https://github.com/ngx-translate/ionic-example
