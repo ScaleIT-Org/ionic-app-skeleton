@@ -25,7 +25,7 @@ export class AdministrationPage {
     console.log("ionViewDidLoad AdministrationPage");
 
 console.log("Fetching data...");
-    let dataObserver = this.dataProvider.getData();
+    let dataObserver = this.dataProvider.getData<Object[]>();
 
     dataObserver
       .subscribe(dataFromProvider => {

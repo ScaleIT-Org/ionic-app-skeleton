@@ -13,6 +13,8 @@ RUN date && apk del tzdata
 
 # Copy Node.js App dependency manifest
 COPY package.json ./package.json
+# Use exactly the same versions as in local environment
+COPY package-lock.json ./package-lock.json
 # Install Node.js dependencies
 RUN npm install
 # RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/

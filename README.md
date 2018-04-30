@@ -78,6 +78,16 @@ Alternatively use cherry picking (or patching):
 
 TODO: tutorials 
 
+## Troubleshooting
+
+### Running on windows
+Most likely, when executing `npm install` on windows, you will get weird issues related to "node-gyp".
+You can solve this issue by running
+```
+npm install --global --production windows-build-tools
+```
+inside CMD or Powershell **with administator privileges** before running install.
+
 ## Learning Material
 
 Reactive Manifesto: https://www.reactivemanifesto.org/
