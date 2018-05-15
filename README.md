@@ -22,12 +22,9 @@ Skeleton Functionality:
 | ------------- | ------------- |
 | <img src="Resources/Store/Screenshots/Mobile%20Main%20Page.png?raw=true"/> | <img src="Resources/Store/Screenshots/Desktop%20Main%20Page.png?raw=true"/> |
 
-|Administration view with configurable endpoints|
-| ------------- |
-| <img width="50%" src="https://github.com/ScaleIT-Org/ionic-app-skeleton/blob/master/Resources/Store/Screenshots/Administration.png?raw=true"/> |
-
-## Technology Stack
-    Node.js->(Typescript->Angular->Ionic)
+|Administration view with configurable endpoints| Tech Stack |
+| ------------- | ------------- |
+| <img width="100%" src="https://github.com/ScaleIT-Org/ionic-app-skeleton/blob/master/Resources/Store/Screenshots/Administration.png?raw=true"/> | <p align="center"><img width="40%" src="Resources/Documentation/tech-stack.png?raw=true"/> <p align="center">Webpack->(Typescript->Angular->Ionic)->Compiled HTML, JS, CSS</p></p>|
 
 ## Usage (Standalone)
 
