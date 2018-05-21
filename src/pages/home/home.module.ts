@@ -6,12 +6,14 @@ import { PipesModule } from "../../pipes/pipes.module";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient } from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [HomePage],
   imports: [
     IonicPageModule.forChild(HomePage),
     ComponentsModule,
+    CommonModule,
     PipesModule,
     TranslateModule.forRoot({
       loader: {

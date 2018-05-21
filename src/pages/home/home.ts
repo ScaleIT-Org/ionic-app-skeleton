@@ -2,6 +2,7 @@ import { IonicPage        } from "ionic-angular"      ;
 import { Component        } from "@angular/core"      ;
 import { NavController    } from "ionic-angular"      ;
 import { TranslateService } from "@ngx-translate/core";
+import {LocalStorage} from "ngx-store";
 
 @IonicPage({
   name    : "user",
@@ -12,6 +13,9 @@ import { TranslateService } from "@ngx-translate/core";
   templateUrl : "home.html"
 })
 export class HomePage {
+
+  @LocalStorage()
+  storedInput: string;
   today: number;
 
   constructor(

@@ -21,6 +21,11 @@
       <button ion-button (click)="changeLanguage('en')">{{ 'demo.english' | translate }}</button>
     </ion-card-content>
     <ion-card-content style="height:50vh;">
+      Local Storage example:
+      <ion-item>
+        <ion-input placeholder="Write something and I'll get remembered (even after reload)"
+                   [(ngModel)]="storedInput"></ion-input>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
