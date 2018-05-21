@@ -4,6 +4,7 @@ import {HomePage} from "./home";
 import {ComponentsModule} from "../../components/components.module";
 import {PipesModule} from "../../pipes/pipes.module";
 import {TranslateModule} from "@ngx-translate/core";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [HomePage],
@@ -11,7 +12,8 @@ import {TranslateModule} from "@ngx-translate/core";
     IonicPageModule.forChild(HomePage),
     ComponentsModule,
     PipesModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule
   ],
   bootstrap: [HomePage],
   exports: [HomePage]

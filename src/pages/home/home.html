@@ -31,15 +31,15 @@
     </ion-card-header>
     <ion-card-content>
       <!-- Uses classical html navigation -->
-      <a href="/#/admin">Jump to Administration</a>
+      <a routerLink="/admin">Jump to Administration</a>
 
 
       <!-- Use the ionic stack for navigation (automatic back button) -->
       <!-- Text Button -->
-      <button ion-button color="danger" [navPush]="'admin'">Push admin page onto the stack and navigate to it</button>
+      <button ion-button color="danger" routerLink="/admin">Push admin page onto the stack and navigate to it</button>
 
       <!-- Style Icon Button -->
-      <button [navPush]="'admin'" ion-button icon-end>
+      <button routerLink="/admin" ion-button icon-end>
         Admin
         <ion-icon name="ios-construct"></ion-icon>
       </button>

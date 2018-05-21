@@ -10,7 +10,7 @@ import {RouterModule} from "@angular/router";
 import {routes} from "./app.routes";
 import {ComponentsModule} from "../components/components.module";
 import {HomePageModule} from "../pages/home/home.module";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {OtherPageModule} from "../pages/other/other.module";
@@ -26,6 +26,7 @@ import {AdministrationPageModule} from "../pages/administration/administration.m
     HomePageModule,
     OtherPageModule,
     AdministrationPageModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
