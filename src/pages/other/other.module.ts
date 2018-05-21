@@ -1,19 +1,19 @@
 import {NgModule} from "@angular/core";
 import {IonicPageModule} from "ionic-angular";
-import {HomePage} from "./home";
 import {ComponentsModule} from "../../components/components.module";
 import {PipesModule} from "../../pipes/pipes.module";
+import {OtherPage} from "./other";
 import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
-  declarations: [HomePage],
+  declarations: [OtherPage],
   imports: [
-    IonicPageModule.forChild(HomePage),
+    IonicPageModule.forChild(OtherPage),
     ComponentsModule,
     PipesModule,
     TranslateModule
   ],
-  bootstrap: [HomePage],
-  exports: [HomePage]
+  bootstrap: [OtherPage],
+  exports: [OtherPage]
 })
-export class HomePageModule {}
+export class OtherPageModule {}

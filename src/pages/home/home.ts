@@ -1,7 +1,6 @@
-import { IonicPage        } from "ionic-angular"      ;
-import { Component        } from "@angular/core"      ;
-import { NavController    } from "ionic-angular"      ;
-import { TranslateService } from "@ngx-translate/core";
+import {IonicPage} from "ionic-angular";
+import {Component} from "@angular/core";
+import {TranslateService} from "@ngx-translate/core";
 
 @IonicPage({
   name    : "user",
@@ -15,7 +14,6 @@ export class HomePage {
   today: number;
 
   constructor(
-    public  navCtrl   : NavController    ,
     private translate : TranslateService
   ) {
     this.today = Date.now();

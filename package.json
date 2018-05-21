@@ -18,6 +18,8 @@
     "@angular/http": "^5.2.10",
     "@angular/platform-browser": "^5.2.10",
     "@angular/platform-browser-dynamic": "^5.2.10",
+    "@angular/router": "^5.2.10",
+    "core-js": "^2.5.6",
     "@ionic-native/core": "^4.7.0",
     "@ionic-native/splash-screen": "^4.7.0",
     "@ionic-native/status-bar": "^4.7.0",

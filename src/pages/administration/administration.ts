@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { HttpDataProvider } from '../../providers/http-data/http-data';
+import {Component} from "@angular/core";
+import {IonicPage, NavParams} from "ionic-angular";
+import {HttpDataProvider} from '../../providers/http-data/http-data';
 
 /**
  * Generated class for the AdministrationPage page.
@@ -19,7 +19,7 @@ import { HttpDataProvider } from '../../providers/http-data/http-data';
 })
 export class AdministrationPage {
   data: any[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: HttpDataProvider) {}
+  constructor(public navParams: NavParams, public dataProvider: HttpDataProvider) {}
 
   ionViewDidLoad() {
     console.log("ionViewDidLoad AdministrationPage");
