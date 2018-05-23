@@ -1,10 +1,12 @@
+<app-menu></app-menu>    <!--menu component-->
+
 <ion-navbar class="bar-positive">
   <ion-title>
     <img id="app-logo" src="assets/imgs/logo.png" alt="Company Logo">
     <font color="white"> ScaleIT Ionic Node.js Sample Application {{pageName}}</font>
   </ion-title>
   <ion-buttons end>
-    <button ion-button icon-only>
+    <button id="menu_button" ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <button ion-button icon-only>
