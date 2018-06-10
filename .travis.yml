@@ -3,8 +3,6 @@ dist: trusty
 language: node_js
 node_js:
   - "10"
-services:
-  - 'docker'
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "travis" ]]; then
