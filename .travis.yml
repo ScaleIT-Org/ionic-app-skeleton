@@ -3,6 +3,6 @@ language: node_js
 node_js:
   - "10"
 
-deploy:
+after_script:
   - "curl -H \"Content-Type: application/json\" --data '{\"source_type\": \"Branch\", \"source_name\": \"$TRAVIS_BRANCH\"}' -x POST \"https://registry.hub.docker.com/u/scaleit/ionic-app-skeleton/trigger//$DOCKER_HUB_KEY\""
 
