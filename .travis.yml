@@ -1,9 +1,8 @@
-sudo: required
 dist: trusty
 language: node_js
 node_js:
   - "10"
 
-after_success:
+deploy:
   - "curl -H \"Content-Type: application/json\" --data '{\"source_type\": \"Branch\", \"source_name\": \"$TRAVIS_BRANCH\"}' -x POST \"https://registry.hub.docker.com/u/scaleit/ionic-app-skeleton/trigger//$DOCKER_HUB_KEY\""
 
