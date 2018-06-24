@@ -4,5 +4,5 @@ node_js:
   - "10"
 
 after_script:
-  - "curl -H \"Content-Type: application/json\" --data '{\"docker_tag\": \"$TRAVIS_BRANCH\"}' -X POST \"https://registry.hub.docker.com/u/scaleit/ionic-app-skeleton/trigger//$DOCKER_HUB_KEY\""
+  - curl -H "Content-Type: application/json" --data '{"docker_tag": ${TRAVIS_BRANCH}}' -X POST https://registry.hub.docker.com/u/scaleit/ionic-app-skeleton/trigger/$DOCKER_HUB_KEY/
 
