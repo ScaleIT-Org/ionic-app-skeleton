@@ -2,3 +2,8 @@ Dockerfile
 docker-compose.yml
 node_modules/
 Resources
+www
+.git
+.gitignore
+README.md
+.travis.yml
