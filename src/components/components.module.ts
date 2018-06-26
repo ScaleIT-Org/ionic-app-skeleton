@@ -1,7 +1,8 @@
-import { NgModule } from "@angular/core";
-import { IonicModule } from "ionic-angular";
-import { AppFooterComponent } from './app-footer/app-footer';
-import { AppHeaderComponent } from './app-header/app-header';
+import {NgModule} from "@angular/core";
+import {IonicModule} from "ionic-angular";
+import {AppFooterComponent} from './app-footer/app-footer';
+import {AppHeaderComponent} from './app-header/app-header';
+
 @NgModule({
   declarations: [
     AppFooterComponent,
@@ -15,4 +16,5 @@ import { AppHeaderComponent } from './app-header/app-header';
     AppHeaderComponent
   ]
 })
-export class ComponentsModule {}
+export class ComponentsModule {
+}
