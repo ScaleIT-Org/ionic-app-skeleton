@@ -20,9 +20,6 @@ The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a 
 
 This skeleton uses a multi stage build in order to create a very small production ready image. This results in an image size of about 70MB compared to the 300+MB size of the build image.
 
-Docker Compose:
-
-    [docker-compose build] //optional
     docker-compose up -d
     # navigate to localhost:8100
     
@@ -67,12 +64,10 @@ Alternatively use cherry picking (or patching):
         HEALTHCHECK --interval=5m --timeout=3s \
         CMD curl -f http://localhost:5002/ || exit 1
         
-## Navigation and Pages
+<!-- ## Navigation and Pages
 ## Data Providers
 ## Bindings (Two-Way & One-Way)
-## Pipes
-
-TODO: tutorials 
+## Pipes --> 
 
 ## Troubleshooting
 
@@ -83,6 +78,11 @@ You can solve this issue by running
 npm install --global --production windows-build-tools
 ```
 inside CMD or Powershell **with administator privileges** before running install.
+
+## How to build
+
+    docker-compose build 
+    docker-compose up -d
 
 ## Learning Material
 
