@@ -33,6 +33,9 @@ This skeleton uses a multi stage build in order to create a very small productio
 | ------------- | ------------- |
 | <img width="100%" src="https://github.com/ScaleIT-Org/ionic-app-skeleton/blob/master/Resources/Store/Screenshots/Administration.png?raw=true"/> | <p align="center"><img width="40%" src="Resources/Documentation/tech-stack.png?raw=true"/> <p align="center">Webpack->(Typescript->Angular->Ionic)->Compiled HTML, JS, CSS</p></p>|
 
+## Requirements
+-
+
 ## Features
 
 1) Ionic frontend with Angular
@@ -40,6 +43,39 @@ This skeleton uses a multi stage build in order to create a very small productio
 2) Data Providers and Pipes
 2) Nginx Server for serving the built project (docker build only)
     
+## Known Issues
+ - 
+
+## Troubleshooting
+
+### Running on windows
+Most likely, when executing `npm install` on windows, you will get weird issues related to "node-gyp".
+You can solve this issue by running
+```
+npm install --global --production windows-build-tools
+```
+inside CMD or Powershell **with administator privileges** before running install.
+
+## How to build
+
+```
+  docker-compose build 
+  docker-compose up -d
+```
+
+## Configuration
+
+- 
+
+## Tests
+  
+  - IsRunningTest: Tests if application is running
+  - qrcode-btn test: Tests if the qrcode-btn is deactivated and activated correctly 
+
+	
+## Notes
+This is still a work in progress 
+
 ## Development
 
 In order to simplify development we recommend working locally (or with a docker bind mount) and using the ionic hot reload feature of the ionic dev server
@@ -68,21 +104,6 @@ Alternatively use cherry picking (or patching):
 ## Data Providers
 ## Bindings (Two-Way & One-Way)
 ## Pipes --> 
-
-## Troubleshooting
-
-### Running on windows
-Most likely, when executing `npm install` on windows, you will get weird issues related to "node-gyp".
-You can solve this issue by running
-```
-npm install --global --production windows-build-tools
-```
-inside CMD or Powershell **with administator privileges** before running install.
-
-## How to build
-
-    docker-compose build 
-    docker-compose up -d
 
 ## Learning Material
 
