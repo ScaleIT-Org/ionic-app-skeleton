@@ -6,17 +6,27 @@
 
 The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Domain Apps.
 
-Give it a try:
+## How to Use
+### Standalone 
 
-    docker-compose up
+    # Resolve dependencies
+    npm install
+    # Build frontend
+    npm run build 
+    # Run dev server
+    npm run ionic:serve
+
+### Docker
+
+This skeleton uses a multi stage build in order to create a very small production ready image. This results in an image size of about 70MB compared to the 300+MB size of the build image.
+
+Docker Compose:
+
+    [docker-compose build] //optional
+    docker-compose up -d
     # navigate to localhost:8100
-
-Skeleton Functionality:
-
-1) Ionic frontend with Angular
-2) Pages and Navigation
-2) Data Providers and Pipes
-2) Nginx Server for serving the built project (docker build only)
+    
+## Screenshots 
 
 | Mobile        | Desktop       |
 | ------------- | ------------- |
@@ -26,23 +36,12 @@ Skeleton Functionality:
 | ------------- | ------------- |
 | <img width="100%" src="https://github.com/ScaleIT-Org/ionic-app-skeleton/blob/master/Resources/Store/Screenshots/Administration.png?raw=true"/> | <p align="center"><img width="40%" src="Resources/Documentation/tech-stack.png?raw=true"/> <p align="center">Webpack->(Typescript->Angular->Ionic)->Compiled HTML, JS, CSS</p></p>|
 
-## Usage (Standalone)
+## Features
 
-    # Resolve dependencies
-    npm install
-    # Build frontend
-    npm run build 
-    # Run dev server
-    npm run ionic:serve
-
-## Usage (Docker)
-
-This skeleton uses a multi stage build in order to create a very small production ready image. This results in an image size of about 70MB compared to the 300+MB size of the build image.
-
-Docker Compose:
-
-    [docker-compose build] //optional
-    docker-compose up
+1) Ionic frontend with Angular
+2) Pages and Navigation
+2) Data Providers and Pipes
+2) Nginx Server for serving the built project (docker build only)
     
 ## Development
 
