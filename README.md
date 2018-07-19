@@ -7,12 +7,12 @@
 The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use production ready scaffolding for ScaleIT Ready Domain Apps.
 
 ## How to Use
-### Standalone 
+### Standalone
 
     # Resolve dependencies
     npm install
     # Build frontend
-    npm run build 
+    npm run build
     # Run dev server
     npm run ionic:serve
 
@@ -22,8 +22,8 @@ This skeleton uses a multi stage build in order to create a very small productio
 
     docker-compose up -d
     # navigate to localhost:8100
-    
-## Screenshots 
+
+## Screenshots
 
 | Mobile        | Desktop       |
 | ------------- | ------------- |
@@ -42,9 +42,9 @@ This skeleton uses a multi stage build in order to create a very small productio
 2) Pages and Navigation
 2) Data Providers and Pipes
 2) Nginx Server for serving the built project (docker build only)
-    
+
 ## Known Issues
- - 
+ - The --prod flag for ionic:build results in an Error which needs to be resolved. Till now dont use production build. Flag removed with commit: fe76eaf96fc7c7630682cfdfac4060deb64a5657
 
 ## Troubleshooting
 
@@ -59,29 +59,28 @@ inside CMD or Powershell **with administator privileges** before running install
 ## How to build
 
 ```
-  docker-compose build 
+  docker-compose build
   docker-compose up -d
 ```
 
 ## Configuration
 
-- 
+-
 
 ## Tests
-  
-  - IsRunningTest: Tests if application is running
-  - qrcode-btn test: Tests if the qrcode-btn is deactivated and activated correctly 
 
-	
+  No Tests
+
+
 ## Notes
-This is still a work in progress 
+This is still a work in progress
 
 ## Development
 
 In order to simplify development we recommend working locally (or with a docker bind mount) and using the ionic hot reload feature of the ionic dev server
 
     npm run ionic:serve
-    
+
 In order to pull from this repo as upstream you should use githubs rebasing feature:
 
     git checkout alpine
@@ -94,16 +93,16 @@ Alternatively use cherry picking (or patching):
 
     git cherry-pick d147423..2622049
     git cherry-pick d147423
-    
+
 ## Health Check (Optional)
         #Build with healtcheck enabled
         HEALTHCHECK --interval=5m --timeout=3s \
         CMD curl -f http://localhost:5002/ || exit 1
-        
+
 <!-- ## Navigation and Pages
 ## Data Providers
 ## Bindings (Two-Way & One-Way)
-## Pipes --> 
+## Pipes -->
 
 ## Learning Material
 
