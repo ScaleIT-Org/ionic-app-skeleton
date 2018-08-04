@@ -9,7 +9,8 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "testcafe firefox test/test.js"
   },
   "dependencies": {
     "@angular/common": "^5.2.11",
@@ -36,6 +37,8 @@
     "@angular/compiler-cli": "^5.2.11",
     "@ionic/app-scripts": "^3.1.9",
     "ng-packagr": "^2.4.5",
+    "testcafe": "^0.21.0",
+    "testcafe-angular-selectors": "^0.3.0",
     "tsickle": "^0.27.5",
     "typescript": "^2.9.1",
     "yarn": "^1.7.0"
