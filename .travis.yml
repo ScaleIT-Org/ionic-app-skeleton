@@ -1,0 +1,56 @@
+dist: trusty
+sudo: required
+language: node_js
+node_js:
+  - "node"
+  - '9'
+
+addons:
+  firefox: latest
+  apt:
+    sources:
+     - google-chrome
+    packages:
+     - google-chrome-stable fluxbox
+
+services:
+  - docker
+
+env:
+  global:
+  - DOCKER_COMPOSE_VERSION="1.13.0"
+  - REGISTRY_USER=scaleitrobot
+  - secure: QFy70YrnT0l3ztREfvWuT7XhjTcTQHDZbj0FVihQHlmVR88A4J4emlGey42C0fl5yIw/QpImk0NQ8EIjWhpTR8n6Z4N6LYxnojFgXpiSRb2IKS4E5I7i2jF8r0Hm3oPiYCmG6E4j7HH6AYsOG9iRaAtB2I0s/Ji6NEA0qgJ8h/eyx7tlESI3InDYRE7i8haa/VB0W98zQWZrGfVsLzp74PeKtmc7XkAzYIYyF2kLgDiikE00jcvQnV4+Z2ZsXeUQcu9AqGoxVzWcvrtxUMXBHOztWywxmFmFIs2BVbXg+Amv4kOlgudfcAmIvhCp2rQd3/LQ3/FHeEJd89+qtzLi/Xq0apGULPQQzF6e9pH1TuQJu6+0exOmr+F158fsdRxY5U1AIQy/ruog80Dy3oU6dkEvkxOMnJmeeD4d4l0W5jYRXDHMDbHrW1Zqmv/inDkBywCN4CSbOSG5P82OzIZb6gg/NBiDnspr8EiXf0JELjBsG7Bqj9EZgQUzEjXvCfSNlkmTCZG09RVvsCGAHBQRic0VO4fF1os4TDaVD5XrqEYDbugqTIMfyh/WJiQ74M72Msmgkp5KXSMEH4HIpqjeWn4co2BAbszJSp24t5QP0XAOSiBaHwQ+lbqNMU56wX7+sbKA3XxA9VsrVlc2Et9wGwSEzaxyGGLb/Khmalg+ZyA=
+
+before_install:
+- sudo apt-get update
+install:
+- docker-compose --version
+- docker --version
+- npm install --prefix ./
+
+before_script:
+  # Configure Travis to use Xvfb (necessary for testcafe)
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+  - fluxbox >/dev/null 2>&1 &
+  #Build Docker Image
+  - docker-compose up --build -d
+script:
+  #For debugging
+  - docker ps
+  #Run Tests
+  - npm test --prefix ./
+
+after_script:
+- docker-compose down
+
+# Deploy image to Dockerhub
+before_deploy:
+- docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+deploy:
+  provider: script
+  script: docker push scaleit/ionic-app-skeleton
+  on:
+    branch: master
