@@ -1,7 +1,7 @@
 version: '2'
 services:
    scaleit-ionic-app:
-	image: scaleit/ionic-app-skeleton
+        image: scaleit/ionic-app-skeleton
         build: .
         ports:
           - "8100:80"
