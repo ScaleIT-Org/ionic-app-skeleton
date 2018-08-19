@@ -15,6 +15,26 @@ The Ionic App Skeleton is a pre-configured base for ScaleIT Apps. It provides a 
     npm run build
     # Run dev server
     npm run ionic:serve
+    
+    
+ #### Development
+
+In order to simplify development we recommend working locally (or with a docker bind mount) and using the ionic hot reload feature of the ionic dev server
+
+    npm run ionic:serve
+
+In order to pull from this repo as upstream you should use githubs rebasing feature:
+
+    git checkout alpine
+    git pull --rebase origin master
+
+    git checkout dev
+    git pull --rebase origin alpine
+
+Alternatively use cherry picking (or patching):
+
+    git cherry-pick d147423..2622049
+    git cherry-pick d147423
 
 ### Docker
 
@@ -62,7 +82,12 @@ inside CMD or Powershell **with administator privileges** before running install
   docker-compose build
   docker-compose up -d
 ```
-
+### Health Check (Optional)
+        #Build with healtcheck enabled
+        HEALTHCHECK --interval=5m --timeout=3s \
+        CMD curl -f http://localhost:5002/ || exit 1
+        
+        
 ## Configuration
 
 -
@@ -75,29 +100,9 @@ inside CMD or Powershell **with administator privileges** before running install
 ## Notes
 This is still a work in progress
 
-## Development
 
-In order to simplify development we recommend working locally (or with a docker bind mount) and using the ionic hot reload feature of the ionic dev server
 
-    npm run ionic:serve
 
-In order to pull from this repo as upstream you should use githubs rebasing feature:
-
-    git checkout alpine
-    git pull --rebase origin master
-
-    git checkout dev
-    git pull --rebase origin alpine
-
-Alternatively use cherry picking (or patching):
-
-    git cherry-pick d147423..2622049
-    git cherry-pick d147423
-
-## Health Check (Optional)
-        #Build with healtcheck enabled
-        HEALTHCHECK --interval=5m --timeout=3s \
-        CMD curl -f http://localhost:5002/ || exit 1
 
 <!-- ## Navigation and Pages
 ## Data Providers
