@@ -32,7 +32,8 @@
     "ngx-store": "1.4.3",
     "rxjs": "5.5.8",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.18",
+    "ts-debug": "1.2.0"
   },
   "devDependencies": {
     "@angular/compiler": "5.2.11",
